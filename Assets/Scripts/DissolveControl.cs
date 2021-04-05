@@ -9,6 +9,9 @@ public class DissolveControl : MonoBehaviour
     public bool shouldUndissolve;
     [Range(0, 1)] public float myVal = 0f;
     public float dissolveTime;
+    public float setInactiveTime = 2.6f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +25,29 @@ public class DissolveControl : MonoBehaviour
         {
             StartDissolve();
         }
+
+        if (shouldUndissolve)
+        {
+            Undissolve();
+        }
     }
 
     public void StartDissolve()
     {
         myVal += dissolveTime * Time.deltaTime;
         mRend.material.SetFloat("_Amount", myVal);
-        Invoke("SetInactive", 2.6f);
+        Invoke("SetInactive", setInactiveTime);
     }
 
     public void Undissolve()
     {
-        myVal -= dissolveTime * Time.deltaTime;
+        if (myVal > 0)
+        {
+            myVal -= dissolveTime * Time.deltaTime;
+        }
         mRend.material.SetFloat("_Amount", myVal);
-        Invoke("SetAactive", 2.6f);
+        //Invoke("SetAactive", setInactiveTime);
+        
     }
 
     public void SetInactive()
@@ -47,4 +59,25 @@ public class DissolveControl : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+
+    public void ShouldDissolve()
+    {
+        shouldDissolve = true;
+    }
+
+    public void ShouldDissolveFalse()
+    {
+        shouldDissolve = false;
+    }
+
+    public void ShouldUndissolveTrue()
+    {
+        shouldUndissolve = true;
+    }
+
+    public void ShouldUndissolveFalse()
+    {
+        shouldUndissolve = false;
+    }
+
 }

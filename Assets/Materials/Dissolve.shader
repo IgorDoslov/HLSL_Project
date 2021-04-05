@@ -14,7 +14,7 @@
 			Tags { "RenderType" = "Opaque" }
 			LOD 200
 			Cull Off //Fast way to turn your material double-sided
-
+				
 			CGPROGRAM
 			#pragma surface surf Standard fullforwardshadows
 
