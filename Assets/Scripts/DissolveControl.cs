@@ -37,6 +37,8 @@ public class DissolveControl : MonoBehaviour
         myVal += dissolveTime * Time.deltaTime;
         mRend.material.SetFloat("_Amount", myVal);
         Invoke("SetInactive", setInactiveTime);
+        if (myVal > 1.0f)
+            myVal = 1.0f;
     }
 
     public void Undissolve()
@@ -47,7 +49,8 @@ public class DissolveControl : MonoBehaviour
         }
         mRend.material.SetFloat("_Amount", myVal);
         //Invoke("SetAactive", setInactiveTime);
-        
+        if (myVal < 0.0f)
+            myVal = 0.0f;
     }
 
     public void SetInactive()

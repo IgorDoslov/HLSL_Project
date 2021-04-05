@@ -444,7 +444,7 @@ MonoBehaviour:
   shouldDissolve: 0
   shouldUndissolve: 0
   myVal: 1
-  dissolveTime: 0.3
+  dissolveTime: 0.4
   setInactiveTime: 2.6
 --- !u!1 &57173382
 GameObject:
