@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+Author:		Igor Doslov
+Date:       7/4/2021
+File:		GraphicsProjectApp.h
+Purpose:	
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,12 +17,6 @@ public class ChangeMaterial : MonoBehaviour
     void Start()
     {
         mRend = GetComponent<Renderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ChangeMat()

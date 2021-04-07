@@ -1,15 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Author:		Igor Doslov
+Date:       7/4/2021
+File:		GraphicsProjectApp.h
+Purpose:	
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+  
     // Update is called once per frame
     void Update()
     {

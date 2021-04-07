@@ -15,7 +15,7 @@ public class WinCondition : MonoBehaviour
             Debug.Log("Win");
 
             winButton.gameObject.SetActive(true);
-            ScoreControl.platformScore += 2;
+            
             sl.LoadWinSceneName();
 
         }
