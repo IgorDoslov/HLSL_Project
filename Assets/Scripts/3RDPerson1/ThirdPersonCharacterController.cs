@@ -89,9 +89,9 @@ public class ThirdPersonCharacterController : MonoBehaviour
         {
             Grounded = true;
             anim.SetBool("IsJumping", false);
-            return true; //hit.collider != null;
+            return true; 
         }
-        //anim.SetBool("IsJumping", false);
+        
         Grounded = false;
         return false;
     }

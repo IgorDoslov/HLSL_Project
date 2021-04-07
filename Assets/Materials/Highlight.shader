@@ -35,7 +35,7 @@
 								1);
 
 				o.Albedo = lerp(_ObjectColor, _HighlightColor, highlight_value);
-				o.Emission = lerp((0,0,0), _HighlightColor.xyz, highlight_value);
+				o.Emission = lerp(( 0,0,0 ), _HighlightColor.xyz, highlight_value);
 			}
 			ENDCG
 	}

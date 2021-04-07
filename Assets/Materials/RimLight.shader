@@ -1,4 +1,4 @@
-﻿Shader "RimLight"
+﻿Shader "Custom/RimLight"
 {
     Properties
     {
@@ -7,7 +7,7 @@
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
         _RimColor("Rim Color", Color) = (1,1,1,1)
-        _RimPower("Rim Power", Range(0.5, 8.0)) = 3.0
+        _RimPower("Rim Power", Range(0.0, 8.0)) = 3.0
     }
     SubShader
     {
