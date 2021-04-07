@@ -9,6 +9,8 @@ public class RimEffectControl : MonoBehaviour
     [Range(0, 8)] public float myValExit = 0f;
     public bool shouldFade = false;
     public float changeSpeed = 2.0f;
+    int pulseNum = 0;
+    public int pulseCount = 8;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,10 @@ public class RimEffectControl : MonoBehaviour
         if(myValExit >= 8.0f)
         {
             myValExit = 0.0f;
+            pulseNum++;
         }
+        if (pulseNum == pulseCount)
+            shouldFade = false;
         
     }
 

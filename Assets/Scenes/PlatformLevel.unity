@@ -11214,7 +11214,8 @@ MonoBehaviour:
   myValEnter: 0
   myValExit: 0
   shouldFade: 0
-  changeSpeed: 10
+  changeSpeed: 40
+  pulseCount: 3
 --- !u!135 &2137654791
 SphereCollider:
   m_ObjectHideFlags: 0
