@@ -14,6 +14,7 @@ public class ChangeMaterial : MonoBehaviour
 {
     Renderer mRend;
     public Material myMat;
+    public bool materialHasChanged = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class ChangeMaterial : MonoBehaviour
 
     public void ChangeMat()
     {
+        materialHasChanged = true;
         mRend.material = myMat;
     }
 }

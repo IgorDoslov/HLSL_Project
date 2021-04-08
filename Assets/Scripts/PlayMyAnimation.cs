@@ -15,16 +15,19 @@ public class PlayMyAnimation : MonoBehaviour
     public Animator anim;
     public string trigger;
     public string tagKeyword;
-
+    public ChangeMaterial cMat;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tagKeyword))
+        if (cMat.materialHasChanged == true)
         {
+            if (other.CompareTag(tagKeyword))
+            {
 
-            anim.SetBool(trigger, true);
-            gameObject.GetComponent<DissolveControl>().shouldDissolve = true;
-            other.gameObject.GetComponent<DissolveControl>().shouldDissolve = true;
+                anim.SetBool(trigger, true);
+                gameObject.GetComponent<DissolveControl>().shouldDissolve = true;
+                other.gameObject.GetComponent<DissolveControl>().shouldDissolve = true;
+            }
         }
     }
 }

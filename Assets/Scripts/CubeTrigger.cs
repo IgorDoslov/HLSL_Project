@@ -12,14 +12,17 @@ using UnityEngine;
 
 public class CubeTrigger : MonoBehaviour
 {
-   
+
     public Transform parent;
     public GameObject objectToAppear;
     public GameObject guiToAppear;
 
 
+
+
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.CompareTag("Key"))
         {
             other.gameObject.transform.SetParent(parent);
@@ -31,5 +34,6 @@ public class CubeTrigger : MonoBehaviour
             objectToAppear.GetComponent<DissolveControl>().ShouldDissolveFalse();
 
         }
+
     }
 }
