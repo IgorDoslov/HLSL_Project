@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+Author:		        Igor Doslov
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		        GravityGun.cs
+Purpose:	        Can pick up and throw objects that are set to layer 8
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,10 +30,13 @@ public class GravityGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if there's a rigidbody picked up
         if (rb)
         {
+            // Move the object to the holder and lerp its motion to make it smooth
             rb.MovePosition(Vector3.Lerp(rb.position, holder.position, Time.deltaTime * lerpSpeed));
 
+            // Throw the object
             if (Input.GetMouseButtonDown(1))
             {
                 rb.isKinematic = false;
@@ -33,15 +44,16 @@ public class GravityGun : MonoBehaviour
                 rb = null;
             }
         }
-
+        
         if (Input.GetMouseButtonDown(0))
         {
+            // Drop the object if holding one
             if (rb)
             {
                 rb.isKinematic = false;
                 rb = null;
             }
-            else
+            else // Pick up an object if not holding one
             {
                 Vector3 rayOrigin = cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
 

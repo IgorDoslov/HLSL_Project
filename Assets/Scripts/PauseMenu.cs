@@ -1,8 +1,9 @@
 ﻿/*
-Author:		Igor Doslov
-Date:       7/4/2021
-File:		GraphicsProjectApp.h
-Purpose:	
+Author:		        Igor Doslov
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		        PauseMenu.cs
+Purpose:	        Allows the game to be paused and sets the pause menu UI as active
 */
 
 using System.Collections;

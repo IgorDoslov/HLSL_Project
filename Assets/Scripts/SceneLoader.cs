@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+Author:		        Igor Doslov
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		        SceneLoader.cs
+Purpose:	        Loads the correct scene
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

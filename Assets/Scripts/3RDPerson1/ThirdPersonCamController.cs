@@ -1,8 +1,9 @@
 ﻿/*
-Author:		Igor Doslov
-Date:       7/4/2021
-File:		GraphicsProjectApp.h
-Purpose:	
+Author:		        Igor Doslov
+Date Created:       7/4/2021
+Date Modified:      7/4/2021
+File:		        ThirdPersonCamController.cs
+Purpose:	        Controls the movement of the third person camera attached to the player
 */
 
 using System.Collections;
@@ -15,7 +16,7 @@ public class ThirdPersonCamController : MonoBehaviour
     public float minXLook;
     public float maxXLook;
     public Transform camAnchor;
-    public bool invertXRotation;
+    public bool invertXRotation; // For inverting the controls
     private float curXRot;
 
     
@@ -42,6 +43,7 @@ public class ThirdPersonCamController : MonoBehaviour
 
         transform.eulerAngles += Vector3.up * x * lookSensitivity;
 
+        // Inverts the controls
         if (invertXRotation)
             curXRot += y * lookSensitivity;
         else

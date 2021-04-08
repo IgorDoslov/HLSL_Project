@@ -1,8 +1,11 @@
 ﻿/*
-Author:		Igor Doslov
-Date:       7/4/2021
-File:		GraphicsProjectApp.h
-Purpose:	
+Author:		        Igor Doslov
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		        RayViewer.cs
+Purpose:	        Draws a line in scene view to show the ray from the player 
+                    and also makes the player aim at the target floating in front of them,
+                    which has its position lerped to make aiming movement smooth
 */
 
 using System.Collections;
@@ -21,7 +24,6 @@ public class RayViewer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //fpsCam = GetComponentInParent<ThirdPersonCharacterController>().transform.gameObject.GetComponentInChildren<Camera>();
         fpsCam = Camera.main;
     }
 
@@ -32,11 +34,15 @@ public class RayViewer : MonoBehaviour
 
         Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
         Vector3 lineOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+    
         Debug.DrawRay(lineOrigin, fpsCam.transform.forward * weaponRange, Color.green);
 
+        // Make the target sphere move to the point where the ray hits
         if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
-        { target.transform.position = Vector3.Lerp(lastPos, hit.point, lerpSpeed * Time.fixedDeltaTime); }
-        else
+        { 
+            target.transform.position = Vector3.Lerp(lastPos, hit.point, lerpSpeed * Time.fixedDeltaTime); 
+        }
+        else // Makes the target sphere float at a point along the ray at a distance
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out hit, weaponRange);

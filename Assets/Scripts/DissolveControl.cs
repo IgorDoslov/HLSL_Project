@@ -1,8 +1,9 @@
 ﻿/*
 Author:		Igor Doslov
-Date:       7/4/2021
-File:		GraphicsProjectApp.h
-Purpose:	
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		DissolveControl.cs
+Purpose:	Controls the dissolving and undissolving of an object
 */
 
 using System.Collections;
@@ -59,7 +60,7 @@ public class DissolveControl : MonoBehaviour
         if (myVal < 0.0f)
             myVal = 0.0f;
     }
-
+    // These are for control from in game GUI buttons
     public void SetInactive()
     {
         gameObject.SetActive(false);

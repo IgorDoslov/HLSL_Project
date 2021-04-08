@@ -1,8 +1,9 @@
 ﻿/*
-Author:		Igor Doslov
-Date:       7/4/2021
-File:		GraphicsProjectApp.h
-Purpose:	
+Author:		        Igor Doslov
+Date Created:       7/4/2021
+Date Modified:      7/4/2021
+File:		        ChangeMaterial.cs
+Purpose:	        Changes the material of an object. Used in game to make colours appear on objects for a puzzle
 */
 
 using System.Collections;

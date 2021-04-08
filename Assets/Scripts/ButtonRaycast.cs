@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿/*
+Author:		        Igor Doslov
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		        ButtonRaycast.cs
+Purpose:	        Detects a raycast and allows a button on a canvas to be invoked
+*/
+
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;

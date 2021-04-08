@@ -1,8 +1,9 @@
 ﻿/*
-Author:		Igor Doslov
-Date:       7/4/2021
-File:		GraphicsProjectApp.h
-Purpose:	
+Author:		        Igor Doslov
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
+File:		        RimEffectControl.cs
+Purpose:	        Creates a pulse effect using the rimlight shader
 */
 
 using System.Collections;
