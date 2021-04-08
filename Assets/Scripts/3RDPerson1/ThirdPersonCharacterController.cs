@@ -1,7 +1,7 @@
 ﻿/*
 Author:		        Igor Doslov
-Date Created:       7/4/2021
-Date Modified:      7/4/2021
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
 File:		        ThirdPersonCharacterController.cs
 Purpose:	        Allows the player to move and jump
 */

@@ -1,7 +1,7 @@
 ﻿/*
 Author:		        Igor Doslov
-Date Created:       7/4/2021
-Date Modified:      7/4/2021
+Date Created:       1/4/2021
+Date Modified:      8/4/2021
 File:		        ThirdPersonCamController.cs
 Purpose:	        Controls the movement of the third person camera attached to the player
 */
@@ -36,8 +36,9 @@ public class ThirdPersonCamController : MonoBehaviour
 
     void CamControl()
     {
-        if (PauseMenu.gameIsPaused == true)
+        if (PauseMenu.gameIsPaused == true) // Can't move if game is paused
             return;
+
         float x = Input.GetAxis("Mouse X");
         float y = Input.GetAxis("Mouse Y");
 
@@ -49,7 +50,7 @@ public class ThirdPersonCamController : MonoBehaviour
         else
             curXRot -= y * lookSensitivity;
 
-        curXRot = Mathf.Clamp(curXRot, minXLook, maxXLook);
+        curXRot = Mathf.Clamp(curXRot, minXLook, maxXLook); // Stops player from being able to look to far up and down
 
         Vector3 clampedAngle = camAnchor.eulerAngles;
         clampedAngle.x = curXRot;

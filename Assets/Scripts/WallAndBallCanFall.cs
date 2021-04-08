@@ -1,9 +1,10 @@
 ﻿/*
 Author:		        Igor Doslov
-Date Created:       1/4/2021
+Date Created:       8/4/2021
 Date Modified:      8/4/2021
 File:		        WallAndBallCanFall.cs
-Purpose:	
+Purpose:	        To make the ball and wall not kinematic so that 
+                    the ball hits the wall and it falls over to create a bridge
 */
 
 using System.Collections;
@@ -14,6 +15,7 @@ public class WallAndBallCanFall : MonoBehaviour
 {
     public Rigidbody ball;
     Rigidbody wall;
+
     // Start is called before the first frame update
     void Start()
     {
