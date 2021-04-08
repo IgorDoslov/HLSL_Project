@@ -17,7 +17,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
     public Rigidbody rb;
     public Animator anim;
     
-
+    // Is the player on the ground
     public bool Grounded
     {
         get
@@ -30,6 +30,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         }
     }
     
+    // Is the player falling
     public bool Falling
     {
         get 
@@ -90,12 +91,12 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     bool CanJump()
     {
-        Ray ray = new Ray(transform.position, Vector3.down);
+        Ray ray = new Ray(transform.position, Vector3.down); // Shoot a ray down
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 1.5f))
+        if (Physics.Raycast(ray, out hit, 1.5f)) // If the ray hits the ground
         {
-            Grounded = true;
+            Grounded = true; // is the player on the ground?
             anim.SetBool("IsJumping", false);
             return true; 
         }
