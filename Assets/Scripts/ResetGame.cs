@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+Author:		        Igor Doslov
+Date Created:       8/4/2021
+Date Modified:      8/4/2021
+File:		        ResetGame.cs
+Purpose:	        Reloads the scene if you fall off the edge or drop a cube off the edge
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
